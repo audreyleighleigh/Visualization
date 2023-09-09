@@ -15,8 +15,8 @@ function animateClouds() {
     // Animation function
     function moveClouds() {
         // Move clouds to the left
-        cloud1X -= cloudSpeed;
-        cloud2X -= cloudSpeed;
+        cloud1X -= 800;
+        cloud2X -= 800;
         
         // Apply new positions
         cloud1.setAttribute('transform', `translate(${cloud1X}, 0)`);
