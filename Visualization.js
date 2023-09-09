@@ -10,13 +10,13 @@ function animateClouds() {
     let cloud2X = 1920; // Start off-screen to the right
     
     // Animation speed (you can adjust this value)
-    const cloudSpeed = 2; // Adjust the speed as needed
+    const cloudSpeed = 5; // Adjust the speed as needed
     
     // Animation function
     function moveClouds() {
         // Move clouds to the left
-        cloud1X -= 800;
-        cloud2X -= 800;
+        cloud1X -= cloudSpeed;
+        cloud2X -= cloudSpeed;
         
         // Apply new positions
         cloud1.setAttribute('transform', `translate(${cloud1X}, 0)`);
