@@ -18,9 +18,9 @@ function animateClouds() {
         cloud1X -= cloudSpeed;
         cloud2X -= cloudSpeed;
 
-        // Apply new positions
-        cloud1.setAttribute('x', cloud1X);
-        cloud2.setAttribute('x', cloud2X);
+        // Apply new positions using the transform attribute
+        cloud1.setAttribute('transform', `translate(${cloud1X}, 0)`);
+        cloud2.setAttribute('transform', `translate(${cloud2X}, 0)`);
 
         // Check if clouds have moved off-screen to the left
         if (cloud1X < -300) {
