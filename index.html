@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Rising Cost of Life</title>
-    <script src="https://raw.githubusercontent.com/audreyleighleigh/Visualization/main/Visualization.js"></script>
+
     
     <!-- Your CSS styles go here -->
     <style>
@@ -20,7 +20,19 @@
             stroke: #999598;
         }
 
-        /* Define additional CSS styles for your SVG elements */
+          /* Add cloud animation */
+          @keyframes moveClouds {
+            0% {
+                transform: translateX(100%);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
+        #Cloud1, #Cloud2 {
+            animation: moveClouds 5s linear infinite;
+        }
     </style>
 </head>
 <body>
