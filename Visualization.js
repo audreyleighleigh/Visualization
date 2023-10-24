@@ -54,6 +54,7 @@ function initSlider() {
     // Event listener for mouse down on the slider bar
     sliderBar.addEventListener('mousedown', (event) => {
       isDragging = true;
+      console.log('Slider clicked'); // Log a message when the dot is clicked
       updateDotPosition(event);
     });
   
