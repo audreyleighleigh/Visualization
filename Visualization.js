@@ -35,9 +35,69 @@ function animateClouds() {
         requestAnimationFrame(moveClouds);
     }
 
+    // Function to handle slider functionality
+function initSlider() {
+    const sliderBar = document.getElementById('XYBar'); // Updated slider bar ID
+    const sliderDot = document.getElementById('Dot1'); // Updated slider dot/thumb ID
+  
+    // Flag to track whether the user is currently dragging the slider
+    let isDragging = false;
+  
+    // Get the initial dot position from the SVG element
+    let dotX = parseFloat(sliderDot.getAttribute('cx'));
+  
+    // Function to update the dot's position
+    function updateDot() {
+      sliderDot.setAttribute('cx', dotX);
+    }
+  
+    // Event listener for mouse down on the slider bar
+    sliderBar.addEventListener('mousedown', (event) => {
+      isDragging = true;
+      updateDotPosition(event);
+    });
+  
+    // Event listener for mouse move (dragging) on the slider bar
+    sliderBar.addEventListener('mousemove', (event) => {
+      if (isDragging) {
+        updateDotPosition(event);
+      }
+    });
+  
+    // Event listener for mouse up (release) anywhere on the page
+    window.addEventListener('mouseup', () => {
+      isDragging = false;
+    });
+  
+    // Function to update the dot's position based on mouse coordinates
+    function updateDotPosition(event) {
+      const sliderRect = sliderBar.getBoundingClientRect();
+      const mouseX = event.clientX - sliderRect.left;
+  
+      // Ensure the dot stays within the slider bounds
+      dotX = Math.min(390, Math.max(10, mouseX));
+      updateDot();
+  
+      // Calculate a value based on the dot's position (you can adjust this formula)
+      const sliderValue = (dotX - 10) / 380;
+  
+      // Use the sliderValue as needed (e.g., for animations or other actions)
+      console.log('Slider Value:', sliderValue);
+    }
+  
+    // Initialize the dot's position
+    updateDot();
+  }
+  
+  // Run the slider initialization when the window loads
+
+  
+
     // Start the animation
     moveClouds();
 }
 
-// Run the animation when the window loads
-window.onload = animateClouds;
+window.onload = () => {
+    animateClouds(); // Your existing animation
+    initSlider();    // Initialize the slider
+  };
