@@ -98,21 +98,26 @@ function initSlider() {
     moveClouds();
 }
 
-// Get references to the visible and hidden elements
-const elementVisible = document.getElementById('Square5');
-const elementHidden = document.getElementById('Square5Filled');
+// Function to initialize the element swapping
+function initializeElementSwapping() {
+  // Get references to the visible and hidden elements
+  const elementVisible = document.getElementById('Square5');
+  const elementHidden = document.getElementById('Square5Filled');
 
-// Add a click event listener to the visible element
-elementVisible.addEventListener('click', function() {
-  // Hide the visible element
-  elementVisible.style.display = 'none';
+  // Add a click event listener to the visible element
+  elementVisible.addEventListener('click', function() {
+    // Hide the visible element
+    elementVisible.style.display = 'none';
 
-  // Show the hidden element
-  elementHidden.style.display = 'inline'; // or 'block' depending on your layout needs
-});
+    // Show the hidden element
+    elementHidden.style.display = 'inline'; // or 'block' depending on your layout needs
+  });
+}
 
+// Run the initialization when the window loads
 
 window.onload = () => {
     animateClouds(); // Your existing animation
     initSlider();    // Initialize the slider
+    initializeElementSwapping();
   };
