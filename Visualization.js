@@ -37,23 +37,35 @@ function animateClouds() {
 
     // Your existing JavaScript code
 
-// Add a DOMContentLoaded event listener to ensure the code runs when the DOM is ready
-document.addEventListener("DOMContentLoaded", function () {
-  // Add drag behavior to the slider track (XYBar)
-  const sliderTrack = d3.select("#XYBar rect.slider-track");
-
-  const drag = d3.drag().on("drag", function (event) {
-    // Update the position of the slider thumb based on user drag
-    const x = Math.max(288, Math.min(1755, event.x)); // Constrain within slider track
-    dot1.attr("transform", `translate(${x}, 176)`);
-
-    // Calculate the selected value based on the thumb's position
-    const selectedValue = (x - 288) / 1467; // Adjust as needed
-    // You can use the selectedValue to update other elements or perform actions.
+// script.js
+document.addEventListener('DOMContentLoaded', function () {
+    const svg = d3.select('svg'); // Select your SVG element
+  
+    // Create the drag behavior for the slider track
+    const sliderTrack = svg.select('#XYBar rect.slider-track');
+    const sliderDrag = d3.drag()
+      .on('drag', function (event) {
+        const newX = Math.max(288, Math.min(1755, event.x));
+        sliderTrack.attr('x', newX);
+        // Calculate the selected value based on the slider's position
+        const selectedValue = (newX - 288) / 1467; // Adjust as needed
+        // You can use the selectedValue to update other elements or perform actions.
+      });
+  
+    sliderTrack.call(sliderDrag);
+  
+    // Create the drag behavior for the button (Dot1)
+    const button = svg.select('#Dot1');
+    const buttonDrag = d3.drag()
+      .on('drag', function (event) {
+        const newX = Math.max(288, Math.min(1755, event.x));
+        button.attr('transform', `translate(${newX}, 176)`);
+        // You can perform additional actions here as needed.
+      });
+  
+    button.call(buttonDrag);
   });
-
-  sliderTrack.call(drag);
-});
+  
 
 // Function to handle slider functionality
  
@@ -61,7 +73,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 window.onload = () => {
     animateClouds(); // Your existing animation
-    initSlider(); // Initialize the slider
+    initialize; // Initialize the slider
   };
 
 
