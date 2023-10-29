@@ -36,7 +36,10 @@ function animateClouds() {
     }
 
     // Your existing JavaScript code
-
+window.onload = () => {
+    animateClouds(); // Your existing animation
+    initialize; // Initialize the slider
+  };
 // script.js
 document.addEventListener('DOMContentLoaded', function () {
     const svg = d3.select('svg'); // Select your SVG element
@@ -71,10 +74,7 @@ document.addEventListener('DOMContentLoaded', function () {
  
 // Run the initialization when the window loads
 
-window.onload = () => {
-    animateClouds(); // Your existing animation
-    initialize; // Initialize the slider
-  };
+
 
 
   // Path: Visualization.js
