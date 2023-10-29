@@ -712,33 +712,31 @@
               </g>
             
             
-              <!-- New Draggable Thumb (Dot1) -->
-              <g id="Dot1" transform="translate(991.5, 176)">
-                <ellipse class="cls-3" cx="0" cy="0" rx="29.5" ry="30" fill="blue" />
-              </g>
-            </svg>
-            
-            <script>
-              // Add drag behavior to the slider track (XYBar)
-              const sliderTrack = d3.select('#XYBar rect.slider-track');
-              
-              const drag = d3.drag()
-                .on('drag', function(event) {
-                  // Update the position of the slider thumb based on user drag
-                  const x = Math.max(288, Math.min(1755, event.x)); // Constrain within slider track
-                  dot1.attr('transform', `translate(${x}, 176)`);
-            
-                  // Calculate the selected value based on the thumb's position
-                  const selectedValue = (x - 288) / 1467; // Adjust as needed
-                  // You can use the selectedValue to update other elements or perform actions.
-                });
-            
-              sliderTrack.call(drag);
-            </script>
-            
+             <!-- New Draggable Thumb (Dot1) -->
+<g id="Dot1" transform="translate(991.5, 176)">
+  <ellipse class="cls-3" cx="0" cy="0" rx="29.5" ry="30" fill="blue" />
+</g>
+</svg>
 
-            
-          
-    </svg>  
+<script>
+  // Select the Dot1 element using D3.js
+  const dot1 = d3.select('#Dot1');
+
+  // Add drag behavior to the slider track (XYBar)
+  const sliderTrack = d3.select('#XYBar rect.slider-track');
+
+  const drag = d3.drag()
+    .on('drag', function(event) {
+      // Update the position of the slider thumb based on user drag
+      const x = Math.max(288, Math.min(1755, event.x)); // Constrain within slider track
+      dot1.attr('transform', `translate(${x}, 176)`);
+
+      // Calculate the selected value based on the thumb's position
+      const selectedValue = (x - 288) / 1467; // Adjust as needed
+      // You can use the selectedValue to update other elements or perform actions.
+    });
+
+  sliderTrack.call(drag);
+</script>
 </body>
 </html>
