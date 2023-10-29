@@ -703,7 +703,7 @@
               <text class="cls-12" transform="translate(1428.3 1034.21)"><tspan x="0" y="0">Housing</tspan></text>
             </g>
 
-            <svg width="1980" height="1080">
+            <svg id="THEBOX" svg width="1980" height="1080">
 
             
               <!-- New Slider Track (XYBar) -->
@@ -717,26 +717,25 @@
   <ellipse class="cls-3" cx="0" cy="0" rx="29.5" ry="30" fill="blue" />
 </g>
 </svg>
-
 <script>
-  // Select the Dot1 element using D3.js
-  const dot1 = d3.select('#Dot1');
-
-  // Add drag behavior to the slider track (XYBar)
-  const sliderTrack = d3.select('#XYBar rect.slider-track');
-
-  const drag = d3.drag()
-    .on('drag', function(event) {
-      // Update the position of the slider thumb based on user drag
-      const x = Math.max(288, Math.min(1755, event.x)); // Constrain within slider track
-      dot1.attr('transform', `translate(${x}, 176)`);
-
-      // Calculate the selected value based on the thumb's position
-      const selectedValue = (x - 288) / 1467; // Adjust as needed
-      // You can use the selectedValue to update other elements or perform actions.
-    });
-
-  sliderTrack.call(drag);
+  document.addEventListener('DOMContentLoaded', function () {
+    const svg = d3.select('THEBOX'); // Select your SVG element
+  
+    // Create the drag behavior for the slider track
+    const sliderTrack = svg.select('#XYBar rect.slider-track');
+    const button = svg.select('#Dot1');
+  
+    const drag = d3.drag()
+      .on('drag', function (event, d) {
+        const newX = Math.max(288, Math.min(1755, event.x));
+        d3.select(this).attr('transform', `translate(${newX}, 176)`);
+        // You can perform additional actions here as needed.
+      });
+  
+    sliderTrack.call(drag);
+    button.call(drag); // Apply the same drag behavior to the button
+  });
 </script>
+
 </body>
 </html>
