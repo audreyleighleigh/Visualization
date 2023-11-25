@@ -763,6 +763,29 @@ document.addEventListener('DOMContentLoaded', function () {
     .attr('text-anchor', 'end')
     .text('1984'); // Default starting year text
 
+    // Find the size value for 1984
+const size1984 = +data.find(d => d.YEAR === '1984').SIZE; // Convert to number
+
+// Add a text element for the percentage display
+svg.append('text')
+  .attr('id', 'percentageDisplay')
+  .attr('x', 288) // x position under the left side of the slider
+  .attr('y', 300) // y position adjusted as needed
+  .attr('font-family', 'sans-serif')
+  .attr('font-size', '80px')
+  .attr('text-anchor', 'start')
+  .text('0%'); // Default starting percentage
+
+svg.append('text')
+  .attr('id', 'sinceText')
+  .attr('x', 288) // x position under the left side of the slider
+  .attr('y', 350) // y position adjusted as needed
+  .attr('font-family', 'sans-serif')
+  .attr('font-size', '30px')
+  .attr('text-anchor', 'start')
+  .text('since 1984');
+
+
     // Create the drag behavior
     const drag = d3.drag()
       .on('drag', function (event) {
@@ -788,6 +811,16 @@ document.addEventListener('DOMContentLoaded', function () {
           // Update the transform attribute of the house group to scale it
           house.attr('transform', `scale(${scaleFactor})`);
         }
+        // Find the size value for the current year
+      const currentSize = +data.find(d => d.YEAR === currentYear.toString()).SIZE; // Convert to number  const currentSize = +data.find(d => d.YEAR === newYear.toString()).SIZE; // Convert to number
+
+       // Calculate the percentage change
+        const percentageChange = ((currentSize - size1984) / size1984) * 100;
+
+        // Update the percentage displayed under the left side of the slider
+        svg.select('#percentageDisplay').text(`+${percentageChange.toFixed(2)}%`);
+        // Update the additional text
+        svg.select('#sinceText').text('since 1984');
       });
 
     // Apply the drag behavior to the button
