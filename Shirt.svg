@@ -1,7 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 652 485.1">
-  <defs>
-    <style>
+<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" id="Layer_2" data-name="Layer 2" viewBox="0 0 652 485.1">
+  <ns0:defs>
+    <ns0:style>
       .cls-1 {
         fill: #ff78e6;
         filter: url(#drop-shadow-1);
@@ -21,33 +20,33 @@
       .cls-3 {
         filter: url(#drop-shadow-3);
       }
-    </style>
-    <filter id="drop-shadow-1" filterUnits="userSpaceOnUse">
-      <feOffset dx="7" dy="7"/>
-      <feGaussianBlur result="blur" stdDeviation="5"/>
-      <feFlood flood-color="#000" flood-opacity=".75"/>
-      <feComposite in2="blur" operator="in"/>
-      <feComposite in="SourceGraphic"/>
-    </filter>
-    <filter id="drop-shadow-2" filterUnits="userSpaceOnUse">
-      <feOffset dx="7" dy="7"/>
-      <feGaussianBlur result="blur-2" stdDeviation="5"/>
-      <feFlood flood-color="#000" flood-opacity=".75"/>
-      <feComposite in2="blur-2" operator="in"/>
-      <feComposite in="SourceGraphic"/>
-    </filter>
-    <filter id="drop-shadow-3" filterUnits="userSpaceOnUse">
-      <feOffset dx="7" dy="7"/>
-      <feGaussianBlur result="blur-3" stdDeviation="5"/>
-      <feFlood flood-color="#000" flood-opacity=".75"/>
-      <feComposite in2="blur-3" operator="in"/>
-      <feComposite in="SourceGraphic"/>
-    </filter>
-  </defs>
-  <g id="BIGSHIRT">
-    <path class="cls-1" d="m158.15,23.68c30.85-8.28,46.26,24.49,105.64,30.4,27.79,2.77,49.81-1.88,56.34-3.38,49.82-11.47,57.44-37.96,88.03-40.54,16.04-1.35,29.95,4.59,91.55,57.43,112.2,96.25,108.51,112.97,105.64,118.24-6.49,11.92-28.97,2.5-52.82,23.65-14.22,12.62-15.53,24.22-28.17,27.03-4.4.97-14.18,1.78-35.21-13.51-35.14-25.54-41.36-52.16-49.3-50.67-11.67,2.18-16.91,63.18-3.52,135.13,15.15,81.4,41.75,110.29,24.65,131.75-15.45,19.39-45.49,6.27-123.24,6.76-115.55.72-171.04,30.44-186.62,6.76-4.86-7.39-1.52-13.41,28.17-87.84,22.98-57.62,31.34-79.99,31.69-111.48.05-4.15.26-56.4-17.61-60.81-6.14-1.52-12.39,3.47-24.65,13.51-30.76,25.19-34.26,42.79-49.3,43.92-8.24.62-7.39-4.65-31.69-16.89-20.39-10.27-26.7-9.44-45.78-20.27-15.52-8.81-23.28-13.21-24.65-20.27-2.37-12.18,14.63-21.17,35.21-40.54,20.34-19.15,14.03-20.07,56.34-74.32,26.84-34.42,40.43-51.67,49.3-54.05Z"/>
-    <path class="cls-2" d="m468.57,227.66c43.93-19.15,87.86-38.3,131.79-57.45h0c18.8,5.07,28.66,11.18,29.57,18.34,2.1,16.49-43.22,38.53-135.96,66.12"/>
-    <path class="cls-3" d="m22.61,153.55c37.12,29.57,74.24,59.15,111.37,88.72,3.45,18.44,2.02,29.62-4.3,33.53-14.55,9-54.99-20.51-121.32-88.54"/>
-    <path class="cls-4" d="m153.61,19.96c25.88-13.23,49.59,22.26,108.31,24.8,12.04.52,34.39,1.49,59.32-8.38C350.73,24.71,413.45-3.29,427.53.32c9.19,2.36,17.05,4.37,18.46,8.62,4.94,14.85-66.58,63.77-148.81,73.56-28.28,3.37-48.93,1.05-85.11-3.02-42.05-4.72-71.04-8.29-76.43-24.09-3.85-11.3,4.46-28.52,17.97-35.42Z"/>
-  </g>
-</svg>
+    </ns0:style>
+    <ns0:filter id="drop-shadow-1" filterUnits="userSpaceOnUse">
+      <ns0:feOffset dx="7" dy="7" />
+      <ns0:feGaussianBlur result="blur" stdDeviation="5" />
+      <ns0:feFlood flood-color="#000" flood-opacity=".75" />
+      <ns0:feComposite in2="blur" operator="in" />
+      <ns0:feComposite in="SourceGraphic" />
+    </ns0:filter>
+    <ns0:filter id="drop-shadow-2" filterUnits="userSpaceOnUse">
+      <ns0:feOffset dx="7" dy="7" />
+      <ns0:feGaussianBlur result="blur-2" stdDeviation="5" />
+      <ns0:feFlood flood-color="#000" flood-opacity=".75" />
+      <ns0:feComposite in2="blur-2" operator="in" />
+      <ns0:feComposite in="SourceGraphic" />
+    </ns0:filter>
+    <ns0:filter id="drop-shadow-3" filterUnits="userSpaceOnUse">
+      <ns0:feOffset dx="7" dy="7" />
+      <ns0:feGaussianBlur result="blur-3" stdDeviation="5" />
+      <ns0:feFlood flood-color="#000" flood-opacity=".75" />
+      <ns0:feComposite in2="blur-3" operator="in" />
+      <ns0:feComposite in="SourceGraphic" />
+    </ns0:filter>
+  </ns0:defs>
+  <ns0:g id="BIGSHIRT">
+    <ns0:path class="cls-1" d="m158.15,23.68c30.85-8.28,46.26,24.49,105.64,30.4,27.79,2.77,49.81-1.88,56.34-3.38,49.82-11.47,57.44-37.96,88.03-40.54,16.04-1.35,29.95,4.59,91.55,57.43,112.2,96.25,108.51,112.97,105.64,118.24-6.49,11.92-28.97,2.5-52.82,23.65-14.22,12.62-15.53,24.22-28.17,27.03-4.4.97-14.18,1.78-35.21-13.51-35.14-25.54-41.36-52.16-49.3-50.67-11.67,2.18-16.91,63.18-3.52,135.13,15.15,81.4,41.75,110.29,24.65,131.75-15.45,19.39-45.49,6.27-123.24,6.76-115.55.72-171.04,30.44-186.62,6.76-4.86-7.39-1.52-13.41,28.17-87.84,22.98-57.62,31.34-79.99,31.69-111.48.05-4.15.26-56.4-17.61-60.81-6.14-1.52-12.39,3.47-24.65,13.51-30.76,25.19-34.26,42.79-49.3,43.92-8.24.62-7.39-4.65-31.69-16.89-20.39-10.27-26.7-9.44-45.78-20.27-15.52-8.81-23.28-13.21-24.65-20.27-2.37-12.18,14.63-21.17,35.21-40.54,20.34-19.15,14.03-20.07,56.34-74.32,26.84-34.42,40.43-51.67,49.3-54.05Z" />
+    <ns0:path class="cls-2" d="m468.57,227.66c43.93-19.15,87.86-38.3,131.79-57.45h0c18.8,5.07,28.66,11.18,29.57,18.34,2.1,16.49-43.22,38.53-135.96,66.12" />
+    <ns0:path class="cls-3" d="m22.61,153.55c37.12,29.57,74.24,59.15,111.37,88.72,3.45,18.44,2.02,29.62-4.3,33.53-14.55,9-54.99-20.51-121.32-88.54" />
+    <ns0:path class="cls-4" d="m153.61,19.96c25.88-13.23,49.59,22.26,108.31,24.8,12.04.52,34.39,1.49,59.32-8.38C350.73,24.71,413.45-3.29,427.53.32c9.19,2.36,17.05,4.37,18.46,8.62,4.94,14.85-66.58,63.77-148.81,73.56-28.28,3.37-48.93,1.05-85.11-3.02-42.05-4.72-71.04-8.29-76.43-24.09-3.85-11.3,4.46-28.52,17.97-35.42Z" />
+  </ns0:g>
+</ns0:svg>
